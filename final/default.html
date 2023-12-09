@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <img src="/img/UCSanDiegoLogo-Blue.png" alt="UC San Diego Logo" style="width:200px;">
+    <nav>    
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./courses.html">Courses</a></li>
+            <li><a href="./default.html"class="current">Reviews</a></li>
+        </ul>
+    </nav>
+    <form id="reviewForm">
+        <label for="courseName">Course Name:</label><br><br>
+        <select id="courseName" name="courseName">
+            <option value="CSE 8A">CSE 8A - Introduction to Programming and Computational Problem-Solving I (4) </option>
+            <option value="CSE 11">CSE 11 - Introduction to Programming and Computational Problem-Solving: Accelerated Pace (4)</option>
+            <option value="CSE 12">CSE 12 - Basic Data Structures and Object-Oriented Design (4)</option>
+            <option value="CSE 15L">CSE 15L - Software Tools and Techniques Laboratory (2)</option>
+            <option value="CSE 20">CSE 20 - Discrete Mathematics (4)</option>
+            <option value="CSE 21">CSE 21 - Mathematics for Algorithms and Systems (4)</option>
+            <option value="CSE 100">CSE 100 - Advanced Data Structures (4)</option>
+            <option value="CSE 101">CSE 101 - Design and Analysis of Algorithms (4)</option>
+            <option value="CSE 105">CSE 105 - Theory of Computability (4)</option>
+            <option value="CSE 107">CSE 107 - Introduction to Modern Cryptography (4)</option>
+            <option value="CSE 110">CSE 110 - Software Engineering (4)</option>
+            <option value="CSE 120">CSE 120 - Principles of Computer Operating Systems (4)</option>
+            <option value="CSE 130">CSE 130 - Programming Languages: Principles and Paradigms (4)</option>
+            <option value="CSE 132A">CSE 132A - Database System Principles (4)</option>
+            <option value="CSE 134B">CSE 134B - Web Client Languages (4)</option>
+            <option value="CSE 140">CSE 140 - Components and Design Techniques for Digital Systems (4)</option>
+            <option value="CSE 140L">CSE 140L - Digital Systems Laboratory (2)</option>
+            <option value="CSE 141">CSE 141 - Introduction to Computer Architecture (4)</option>
+            <option value="CSE 141L">CSE 141L - Project in Computer Architecture (2)</option>
+            <option value="CSE 142">CSE 142 - Introduction to Computer Architecture: A Software Perspective (4)</option>
+            <option value="CSE 142L">CSE 142L - Software Project for Computer Architecture (2)</option>
+            <option value="CSE 165">CSE 165 - 3-D User Interaction (4)</option>
+            <option value="CSE 167">CSE 167 - Computer Graphics (4)</option>
+            <option value="CSE 168">CSE 168 - Computer Graphics II: Rendering (4)</option>
+            <option value="CSE 169">CSE 169 - Computer Animation (4)</option>
+            <option value="CSE 170">CSE 170 - Interaction Design (5)</option>
+            <option value="CSE 190">CSE 190 - Topics in Computer Science and Engineering (4)</option>
+        </select><br><br>
+        <label for="difficulty">Difficulty:</label><br>
+        <input type="radio" id="difficulty1" name="difficulty" value="1">
+        <label for="difficulty1">1</label>
+        <input type="radio" id="difficulty2" name="difficulty" value="2">
+        <label for="difficulty2">2</label>
+        <input type="radio" id="difficulty3" name="difficulty" value="3">
+        <label for="difficulty3">3</label>
+        <input type="radio" id="difficulty4" name="difficulty" value="4">
+        <label for="difficulty4">4</label>
+        <input type="radio" id="difficulty5" name="difficulty" value="5">
+        <label for="difficulty5">5</label><br><br>
+
+        <label for="workload">Workload:</label><br>
+        <input type="radio" id="workload1" name="workload" value="1">
+        <label for="workload1">1</label>
+        <input type="radio" id="workload2" name="workload" value="2">
+        <label for="workload2">2</label>
+        <input type="radio" id="workload3" name="workload" value="3">
+        <label for="workload3">3</label>
+        <input type="radio" id="workload4" name="workload" value="4">
+        <label for="workload4">4</label>
+        <input type="radio" id="workload5" name="workload" value="5">
+        <label for="workload5">5</label><br><br>
+        
+        <label for="reviewText">Your Review:</label><br>
+        <textarea id="reviewText" name="reviewText"></textarea><br>
+        <input type="submit" value="Submit">
+    </form><hr>
+    <button id="toggleButton" onclick="toggleForm()">Hide Form</button>
+    
+    <hr><br>
+    <select id="sortSelect" onchange="displayReviews()">
+        <option value="difficulty">Difficulty</option>
+        <option value="workload">Workload</option>
+    </select>
+    <select id="courseSelect" onchange="displayReviews()">
+        <option value="CSE 8A">CSE 8A - Introduction to Programming and Computational Problem-Solving I (4) </option>
+        <option value="CSE 11">CSE 11 - Introduction to Programming and Computational Problem-Solving: Accelerated Pace (4)</option>
+        <option value="CSE 12">CSE 12 - Basic Data Structures and Object-Oriented Design (4)</option>
+        <option value="CSE 15L">CSE 15L - Software Tools and Techniques Laboratory (2)</option>
+        <option value="CSE 20">CSE 20 - Discrete Mathematics (4)</option>
+        <option value="CSE 21">CSE 21 - Mathematics for Algorithms and Systems (4)</option>
+        <option value="CSE 100">CSE 100 - Advanced Data Structures (4)</option>
+        <option value="CSE 101">CSE 101 - Design and Analysis of Algorithms (4)</option>
+        <option value="CSE 105">CSE 105 - Theory of Computability (4)</option>
+        <option value="CSE 107">CSE 107 - Introduction to Modern Cryptography (4)</option>
+        <option value="CSE 110">CSE 110 - Software Engineering (4)</option>
+        <option value="CSE 120">CSE 120 - Principles of Computer Operating Systems (4)</option>
+        <option value="CSE 130">CSE 130 - Programming Languages: Principles and Paradigms (4)</option>
+        <option value="CSE 132A">CSE 132A - Database System Principles (4)</option>
+        <option value="CSE 134B">CSE 134B - Web Client Languages (4)</option>
+        <option value="CSE 140">CSE 140 - Components and Design Techniques for Digital Systems (4)</option>
+        <option value="CSE 140L">CSE 140L - Digital Systems Laboratory (2)</option>
+        <option value="CSE 141">CSE 141 - Introduction to Computer Architecture (4)</option>
+        <option value="CSE 141L">CSE 141L - Project in Computer Architecture (2)</option>
+        <option value="CSE 142">CSE 142 - Introduction to Computer Architecture: A Software Perspective (4)</option>
+        <option value="CSE 142L">CSE 142L - Software Project for Computer Architecture (2)</option>
+        <option value="CSE 165">CSE 165 - 3-D User Interaction (4)</option>
+        <option value="CSE 167">CSE 167 - Computer Graphics (4)</option>
+        <option value="CSE 168">CSE 168 - Computer Graphics II: Rendering (4)</option>
+        <option value="CSE 169">CSE 169 - Computer Animation (4)</option>
+        <option value="CSE 170">CSE 170 - Interaction Design (5)</option>
+        <option value="CSE 190">CSE 190 - Topics in Computer Science and Engineering (4)</option>
+    </select>
+    <div id="reviewsDisplay" style="display: none;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+</html>

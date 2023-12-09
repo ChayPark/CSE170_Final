@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>courses</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <img src="/img/UCSanDiegoLogo-Blue.png" alt="UC San Diego Logo" style="width:200px;">
+    <nav>    
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./courses.html"class="current">Courses</a></li>
+            <li><a href="./default.html">Reviews</a></li>
+        </ul>
+    </nav>
+    <label for="courses">Courses Description:</label><br><br>
+    <button id="toggleButton" onclick="toggleVisibility('coursesFrame')">Show/Hide courses Description</button>
+    <iframe id="coursesFrame" src="https://catalog.ucsd.edu/courses/CSE.html" style="width:100%; height:500px; display:none;"></iframe>
+
+    <script src="script3.js"></script>
+</body>
+</html>

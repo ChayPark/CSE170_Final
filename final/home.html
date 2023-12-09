@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/img/UCSanDiegoLogo-Blue.png" alt="UC San Diego Logo" style="width:200px;">
+    <nav>    
+        <ul>
+            <li><a href="./home.html"class="current">Home</a></li>
+            <li><a href="./courses.html">Courses</a></li>
+            <li><a href="./default.html">Reviews</a></li>
+        </ul>
+    </nav>
+    <div class="description">
+        <p>Welcome to the UC San Diego Course Planner! This comprehensive platform has been designed to make course planning a breeze for students like you.<br>
+            On our user-friendly homepage, you will find a wealth of information at your fingertips. <br>
+            We provide detailed course offerings, RateMyProfessor reviews, and access to the Course and Professor Evaluation (CAPE) system. This combination of resources allows you to conveniently gather all the necessary information to make informed decisions about your academic schedule.To further enhance your planning process, we have incorporated a review section where students can categorize their reviews based on difficulty, workload, and course name sorting.<br>
+            This feature enables you to easily navigate through different aspects of the courses and find the information that matters most to you.Our goal is to save you time and streamline your course planning experience. <br>
+            By providing all the essential tools and information in one place, we aim to empower you to create an ideal academic schedule that aligns with your goals and preferences. <br>
+            Get started now and make the most out of your time at <b>UC San Diego!</b></p>
+    </div>
+    <img src="img/ucsd.PNG" style="width:200px;"><br>
+    <hr>
+    <br>
+    <label for="CourseOffering">Course Offerings:</label><br><br>
+    <button id="toggleButton">Show/Hide Courses Offerings</button>
+    <iframe id="coursesFrame" src="https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudent.htm?_gl=1*1n2iiif*_ga*Mjk3NDYzMTg2LjE2OTk4NDUyOTc.*_ga_PWJGRGMV0T*MTcwMTkwMTYyOC42LjAuMTcwMTkwMTYyOC4wLjAuMA.." style="width:100%; height:500px; display:none;"></iframe>
+    <br>
+    <br>
+    <label for="ratemyprofessors">RateMyProfessors:</label><br><br>
+    <button id="toggleButton" onclick="toggleVisibility('profFrame')">Show/Hide RateMyProfessors</button>
+    <iframe id="profFrame" src="https://www.ratemyprofessors.com" style="width:100%; height:500px; display:none;"></iframe>
+    <br>
+    <br>
+    <label for="cape">CAPE:</label><br><br>
+    <button id="toggleButton" onclick="toggleVisibility('capeFrame')">Show/Hide CAPE</button>
+    <iframe id="capeFrame" src="https://cape.ucsd.edu" style="width:100%; height:500px; display:none;"></iframe>
+
+    <script src="script2.js"></script>
+</body>
+</html>
